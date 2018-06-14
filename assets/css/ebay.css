@@ -10,6 +10,7 @@
     text-align: right;
     top: 0;
     width: 75%;
+    border-radius: 25px;
 }
 
 #main {
@@ -19,8 +20,9 @@
 
 #footr {
     max-width: 75%;
-    padding: 4em 4em 4em 4em;
+    padding: 4em 0em 4em 4em;
     background-color: #ddd;
+    border-radius: 25px;
 }
 
 .image {
