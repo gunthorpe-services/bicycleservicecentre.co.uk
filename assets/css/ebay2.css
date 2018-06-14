@@ -1,0 +1,59 @@
+#header {
+    background-color: #1f1815;
+    background-image: url(https://www.bicycleservicecentre.co.uk/images/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: auto, auto 100%;
+    color: rgba(255, 255, 255, 0.5);
+    height: 100%;
+    left: 0;
+    padding: 8em 4em 0 0;
+    text-align: right;
+    top: 0;
+    width: 35%;
+}
+
+#main {
+    max-width: 54em;
+    padding: 8em 4em 4em 4em;
+}
+
+#footr {
+    max-width: 54em;
+    padding: 8em 4em 4em 4em;
+    background-color: #ddd;
+}
+
+.image {
+    border-radius: 0.35em;
+    border: 0;
+    display: inline-block;
+    position: relative;
+}
+
+#header strong, #header b {
+    color: #ffffff;
+}
+
+strong, b {
+    color: #787878;
+    font-weight: 400;
+}
+
+.p {
+    font-size: 12px;
+    text-align: left;
+}
+
+.h1 {
+    font-size: 40px;
+}
+
+.h2 {
+    font-size: 25px;
+}
+
+.logo {
+    width: 175px;
+    height: 175px;
+}
+
