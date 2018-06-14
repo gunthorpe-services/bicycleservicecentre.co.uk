@@ -1,7 +1,7 @@
 #header {
     background-color: #1f1815;
-    background-image: url(https://www.bicycleservicecentre.co.uk/images/bg.jpg);
-    background-repeat: no-repeat;
+    background-image: url(https://www.bicycleservicecentre.co.uk/assets/css/images/overlay.png), url(https://www.bicycleservicecentre.co.uk/images/bg.jpg);
+    background-repeat: repeat, no-repeat;
     background-size: auto, auto 100%;
     color: rgba(255, 255, 255, 0.5);
     height: 100%;
@@ -14,7 +14,13 @@
 
 #main {
     max-width: 54em;
-    padding: 8em 4em 4em 4em;
+    padding: 4em 4em 4em 4em;
+}
+
+#footr {
+    max-width: 54em;
+    padding: 4em 4em 4em 4em;
+    background-color: #ddd;
 }
 
 .image {
@@ -33,21 +39,41 @@ strong, b {
     font-weight: 400;
 }
 
-.p {
-    font-size: 12px;
+section p {
+    font-size: 15px;
     text-align: left;
 }
 
-.h1 {
+section li {
+    font-size: 15px;
+    text-align: left;
+}
+
+header h1 {
+    font-size: 40px;
+}
+
+section h1 {
+    font-size: 40px;
+}
+
+section h2 {
     font-size: 25px;
 }
 
-.h2 {
-    font-size: 250px;
+header img {
+    border-radius: 50px;
 }
 
-.logo {
+img.logo {
+    border-radius: 25px;
     width: 175px;
     height: 175px;
+    vertical-align: middle;
+}
+
+.footer {
+    font-size: 40px;
+    text-align: center;
 }
 
