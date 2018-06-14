@@ -6,19 +6,19 @@
     color: rgba(255, 255, 255, 0.5);
     height: 100%;
     left: 0;
-    padding: 8em 4em 0 0;
+    padding: 4em 4em 0 0;
     text-align: right;
     top: 0;
-    width: 35%;
+    width: 75%;
 }
 
 #main {
-    max-width: 54em;
+    max-width: 75%;
     padding: 4em 4em 4em 4em;
 }
 
 #footr {
-    max-width: 54em;
+    max-width: 75%;
     padding: 4em 4em 4em 4em;
     background-color: #ddd;
 }
