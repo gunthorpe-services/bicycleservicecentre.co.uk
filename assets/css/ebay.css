@@ -6,7 +6,7 @@
     color: rgba(255, 255, 255, 0.5);
     height: 100%;
     left: 0;
-    padding: 4em 4em 0 0;
+    padding: 2em 2em 2em 2em;
     text-align: right;
     top: 0;
     width: 75%;
@@ -15,12 +15,12 @@
 
 #main {
     max-width: 75%;
-    padding: 4em 4em 4em 4em;
+    padding: 2em 2em 2em 2em;
 }
 
 #footr {
     max-width: 75%;
-    padding: 4em 0em 4em 4em;
+    padding: 2em 2em 2em 2em;
     background-color: #ddd;
     border-radius: 25px;
 }
@@ -69,6 +69,7 @@ section h2 {
 
 header img {
     border-radius: 50px;
+    width: 300px;
 }
 
 img.logo {
