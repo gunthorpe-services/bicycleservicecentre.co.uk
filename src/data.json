@@ -1,0 +1,78 @@
+{
+  "products": [
+    {
+      "id": "thule-15-110",
+      "name": "Thule 15x110 Boost Adapter",
+      "price": 29.99,
+      "category": "Thule",
+      "paypalButtonId": "5BKX2BKV67536",
+      "images": [
+        {"imageurl": "/images/thule-15-110.jpg"},
+        {"imageurl": "/images/thule-15-110_1.jpg"},
+        {"imageurl": "/images/thule-15-110_2.jpg"}
+      ],
+      "description": [
+        {"p": "An adapter for Thule OutRide 561 to enable transport of bikes with 15x110 mm boost thru axles"},
+        {"p": "Simply remove the existing axle adapter and replace with this one in 2 minutes."},
+        {"p": "Precision CNC machined from aluminium"},
+        {"p": "Anodised black for wear and corrosion resistance"},
+        {"p": "Designed by Bicycle Service Centre in the UK"}
+      ]
+    },
+    {
+      "id": "thule-12-100",
+      "name": "Thule 12x100 Adapter",
+      "price": 29.99,
+      "category": "Thule",
+      "paypalButtonId": "PGKTNNWN6R6GU",
+      "images": [
+        {"imageurl": "/images/thule-12-100.png"},
+        {"imageurl": "/images/thule-12-100.jpg"},
+        {"imageurl": "/images/thule-outride-561-fork-mount-cycle-carrier-howto.png"}
+      ],
+      "description": [
+        {"p": "An adapter for Thule OutRide 561 to enable transport of bikes with 12x100 mm thru axles"},
+        {"p": "Simply remove the existing axle adapter and replace with this one in 2 minutes."},
+        {"p": "Precision CNC machined from aluminium"},
+        {"p": "Anodised black for wear and corrosion resistance"},
+        {"p": "Designed by Bicycle Service Centre in the UK"}
+      ]
+    },
+    {
+      "id": "6806",
+      "name": "BB30 Bearings",
+      "price": 5.99,
+      "category": "Bearings",
+      "paypalButtonId": "GJDR2KG74NDXY",
+      "images": [
+        {"imageurl": "/images/6806.png"},
+        {"imageurl": "/images/6806-white.jpg"},
+        {"imageurl": "/images/6806.jpg"}
+      ],
+      "description": [
+        {"p": "Two better than OEM quality ABEC 5 bearings for BB30, BB30A and BBright Direct Fit"},
+        {"p": "Bearings are 6806 / 61806 2RS 30mm x 42mm x 7mm"},
+        {"p": "We also sell a higher spec ceramic hybrid version - please see our other listings"}
+      ]
+    },
+    {
+      "id": "6806HC",
+      "name": "BB30 Hybrid Ceramic Bearings",
+      "price": 17.99,
+      "category": "Bearings",
+      "paypalButtonId": "5GDPPLTCG3MV2",
+      "images": [
+        {"imageurl": "/images/6806hc.jpg"},
+        {"imageurl": "/images/6806hc_2.jpg"},
+        {"imageurl": "/images/6806hc-single.jpg"}
+      ],
+      "description": [
+        {"p": "Bicycle Service Centre Hybrid Ceramic BB30 / BB30A / BBright Bearings (61806-2RS)"},
+        {"p": "Two better than OEM quality ABEC 3 bearings for BB30, BB30A and BBright Direct Fit Bearings are 6806 / 61806 2RS 30mm x 42mm x 7mm"},
+        {"p": "Hybrid Ceramic - Stainless steel race with Silicon Nitride (Si3N4) ball bearings"},
+        {"p": "In ideal conditions, hybrid ceramic bearings will last 5-20 times longer than steel alternatives"}
+      ]
+    }
+  ]
+}
+
