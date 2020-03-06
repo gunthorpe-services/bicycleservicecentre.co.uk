@@ -118,12 +118,12 @@ const ProductPage = ({ match, location }) => {
   stopAutoPlayOnHover
   arrows
   dots
-  slidesPerPage={3}
+  slidesPerPage={2}
   autoPlay={3000}
   animationSpeed={1000}
   breakpoints={{
           1250: { // these props will be applied when screen width is less than 1000px
-            slidesPerPage: 2,
+            slidesPerPage: 1,
             slidesPerScroll: 1,
             centered: false,
           },
