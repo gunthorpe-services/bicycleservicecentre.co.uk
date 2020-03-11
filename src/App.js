@@ -26,12 +26,26 @@ function App() {
         </Route>
       </Switch>
 
-            <footer>
-            <div className="bottom">
-              <div className="left">&copy; Bicycle Service Centre</div>
-              <div className="right"><img src="https://www.paypalobjects.com/webstatic/mktg/Logo/AM_mc_vs_ms_ae_UK.png" className="responsive-md right" border="0" alt="PayPal Acceptance Mark" /></div>
-            </div>
-            </footer>
+        <div className="clear"></div>
+
+        <footer className="footer-distributed">
+			<div className="footer-center">
+				<div>
+					<img className="footer-img" src="https://www.paypalobjects.com/webstatic/mktg/Logo/AM_mc_vs_ms_ae_UK.png" border="0" alt="PayPal Acceptance Mark" />
+				</div>
+				<div>
+					<p><a className="email" href="mailto:service@bicycleservicecentre.co.uk">service@bicycleservicecentre.co.uk</a></p>
+				</div>
+				<div>
+				    <p className="footer-company-name">&copy; Bicycle Service Centre</p>
+				</div>
+			</div>
+			<div className="footer-right">
+				<p className="footer-company-about">
+					<span>We offer quality bicycle tools, bearings and spare parts.</span>
+				</p>
+			</div>
+		</footer>
     </div>
   </Router>
   );
@@ -45,7 +59,7 @@ class Paypal extends Component {
           <label className="price" htmlFor="submit">&pound;{this.props.price} &amp; <strong>FREE</strong> UK Delivery &nbsp;</label>
           <input type="hidden" name="cmd" value="_s-xclick" />
           <input type="hidden" name="hosted_button_id" value={this.props.paypalButtonId} />
-          <input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!" />
+          <input className="buynow" type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!" />
           <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1" />
         </form>
       </div>
@@ -68,7 +82,9 @@ class Headery extends Component {
 
   render() {
     return (
-        <div className="header-right">
+        <div className="topnav">
+          <a href="/" className="logo"><img className="responsive" src="/images/bsc-logo-border.png" alt="Bicycle Service Centre Logo"/></a>
+          <a href="/" className="x">Bicycle Service Centre</a>
           {this.state.categories.map((category, key) =>
             <a className={category.name.toUpperCase() === this.props.selected.toUpperCase() ? 'active' : null} href={category.url} key={category.id}>{category.name}</a>
           )}
@@ -95,15 +111,11 @@ const ProductPage = ({ match, location }) => {
 
   return (
     <>
-        <div className="header">
-          <div><a href="/" className="logo"><img className="responsive-sm" src="/images/bsc-logo-border.png" alt="Bicycle Service Centre Logo"/>Bicycle Service Centre</a></div>
-          <div className="clear"/>
-          <Headery selected={products[0].category} />
-        </div>
+      <Headery selected={products[0].category} />
       <div className="product">
         <h1>{products[0].name}</h1>
         <Paypal price={products[0].price} paypalButtonId={products[0].paypalButtonId} />
-        <h2>Description</h2>
+        <h2 className="description">Description</h2>
                         {
         					products[0].description.map((para, i) => {
         						return (
@@ -113,10 +125,8 @@ const ProductPage = ({ match, location }) => {
         				}
         <div>
 <Carousel
-  centered
   infinite
   stopAutoPlayOnHover
-  arrows
   dots
   slidesPerPage={2}
   autoPlay={3000}
@@ -125,19 +135,17 @@ const ProductPage = ({ match, location }) => {
           1250: { // these props will be applied when screen width is less than 1000px
             slidesPerPage: 1,
             slidesPerScroll: 1,
-            centered: false,
           },
           750: { // these props will be applied when screen width is less than 501px
             slidesPerPage: 1,
             slidesPerScroll: 1,
-            centered: false,
           },
         }}
 >
                 {
 					products[0].images.map((image, i) => {
 						return (
-                                <img className="responsive" key={i} height="400" src={image.imageurl} alt={products[0].name} />
+                                <img className="responsive" key={i} src={image.imageurl} alt={products[0].name} />
 						);
 					})
 				}
@@ -158,11 +166,7 @@ const CategoryPage = ({ match, location }) => {
 
   return (
     <>
-                   <div className="header">
-                     <div><a href="/" className="logo"><img className="responsive-sm" src="/images/bsc-logo-border.png" alt="Bicycle Service Centre Logo"/>Bicycle Service Centre</a></div>
-                     <div className="clear" />
-                     <Headery selected={category} />
-                   </div>
+                <Headery selected={category} />
                 <div className="product">
                   <h1 className="capitalize">{category}</h1>
                     {
@@ -170,13 +174,13 @@ const CategoryPage = ({ match, location }) => {
     						return (
     						<div className="parent">
                                 <div key={i} className="left">
-                                    <img key={i} width="200" src={product.images[0].imageurl} className="xresponsive" alt={product.name} />
+                                    <a href={"/#/product/" + product.id}><img key={i} src={product.images[0].imageurl} className="xresponsive" alt={product.name} /></a>
                                 </div>
                                 <div className="left">
                                     <a href={"/#/product/" + product.id}>{product.name}</a>
                                 </div>
-                                <div className="left">
-                                    <a href={"/#/product/" + product.id}>&pound;{product.price}</a>
+                                <div className="right">
+                                    <a className="price" href={"/#/product/" + product.id}>&pound;{product.price}</a>
                                 </div>
                                 <div className="clear" />
                             </div>
@@ -192,31 +196,22 @@ class AllProductsPage extends Component {
   render() {
     return (
     <>
-                   <div className="header">
-                     <div><a href="/" className="logo"><img className="responsive-sm" src="/images/bsc-logo-border.png" alt="Bicycle Service Centre Logo"/>Bicycle Service Centre</a></div>
-                     <div className="clear" />
-                     <Headery selected="" />
-                   </div>
+                <Headery selected="" />
                 <div className="product">
                   <h1 className="capitalize">All Products</h1>
+                  <div className="row">
                     {
     					data.products.map((product, i) => {
     						return (
-    						<div className="parent">
-                                <div key={i} className="left">
-                                    <img key={i} width="200" src={product.images[0].imageurl} className="xresponsive" alt={product.name} />
-                                </div>
-                                <div className="left">
-                                    <a href={"/#/product/" + product.id}>{product.name}</a>
-                                </div>
-                                <div className="left">
-                                    <a href={"/#/product/" + product.id}>&pound;{product.price}</a>
-                                </div>
-                                <div className="clear" />
+    						<div key={i} className="column">
+                                    <div className="left"><img key={i} src={product.images[0].imageurl} className="xresponsive" alt={product.name} /></div>
+                                    <div className="left"><a href={"/#/product/" + product.id}>{product.name}</a></div>
+                                    <div className="right"><a className="price" href={"/#/product/" + product.id}>&pound;{product.price}</a></div>
                             </div>
     						);
     					})
     				}
+    				</div>
                 </div>
             </>
   );
